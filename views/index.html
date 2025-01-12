@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMX with Go</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo"><h1>MyLogo</h1></div>
+    <div class="nav">
+        <a href="/" hx-boost="true">Home</a>
+        <a href="/about" hx-get="/about" hx-target="#content" hx-swap="innerHTML" hx-push-url="true">About</a>
+        <a href="/resume" hx-get="/resume" hx-target="#content" hx-swap="innerHTML" hx-push-url="true">Resume</a>
+    </div>
+    <div class="footer"><p>&copy; 2025 My Company</p></div>
+</div>
+<div class="main">
+    <div id="content">
+        <h1>Main Content Area</h1>
+        <p>This is the main content area. It is scrollable depending on the content length. You can add more content
+            here to test the scroll functionality.</p>
+    </div>
+</div>
+</body>
+</html>
